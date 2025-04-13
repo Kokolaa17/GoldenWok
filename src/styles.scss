@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #010101;
+}
+
+// animations on load
+@keyframes fromLeft {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(500px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fromBack {
+    from {
+        scale: 0;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Animations
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes bordersize {
+    0% {
+        width: 15%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(3deg); }
+    80% { transform: rotate(-3deg); }
+    90% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+  }
+
