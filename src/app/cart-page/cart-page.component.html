@@ -1,0 +1,33 @@
+<div class="small-commerical">
+    <h2>From our kitchen to your cart — and soon, on your table.</h2>
+</div>
+
+<section class="cart">
+    <table>
+        <tr class="cart-headers">
+            <th>Picture</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        @for (dish of cartItems; track $index) {
+            <tr class="cart-item">
+                <td><img [src]="dish.product.image" alt=""></td>
+                <td>{{dish.product.name}}</td>
+                <td>
+                    <button class="quantity-button"><i class="fa-solid fa-plus"></i></button>
+                    <span>{{dish.quantity}}</span>
+                    <button class="quantity-button"><i class="fa-solid fa-minus"></i></button>
+                </td>
+                <td>{{dish.price}}$</td>
+                <td>{{dish.quantity * dish.price}}$</td>
+                <td>
+                    <button>Remove</button>
+                </td>
+            </tr>
+        }
+    </table>
+</section>
+
