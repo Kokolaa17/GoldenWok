@@ -1,0 +1,139 @@
+.welcome-section {
+    min-height: 88vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    .decoration1 {
+        position: absolute;
+        width: 350px;
+        top: -75px;
+        animation: floating 3s infinite, fromTop 1s;
+    }
+    .right {
+        background-image: url('/images/bestsellerbg.png');
+        background-size: cover;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        min-width: 500px;
+        position: relative;
+        border: 3px solid #fff;
+        box-shadow: 0px 0px 30px #A60E0D;
+        animation: fromBack 1s;
+        &:hover {
+            .discount-tag {
+                transition: 0.5s;
+                transform: translateX(-245px);
+            }
+            h6 {
+                transition: 0.5s;
+                transition-delay: 1s;
+                transform: translateY(180px);
+            }
+            h3 {
+                transition: 0.5s;
+                transition-delay: 0.5s;
+                transform: translateY(-180px);
+            }
+            img {
+                transition: 0.5s;
+                scale: 0.8;
+                animation-play-state: paused;
+            }
+        }
+        .discount-tag {
+            position: absolute;
+            border: 3px solid #fff;
+            background-color: #820000;
+            object-fit: cover;
+            color: #fff;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 50%;
+            font-family: "Reggae One", system-ui;
+            text-align: center;
+            width: 130px;
+        }
+        h6 {
+            font-family: "Reggae One", system-ui;
+            color: #fff;
+            position: absolute;
+            font-size: 20px;
+            text-shadow: 0px 0px 15px #fff;
+        }
+        h3 {
+            font-family: "Reggae One", system-ui;
+            color: #fff;
+            position: absolute;
+            font-size: 30px;
+            text-shadow: 0px 0px 15px #fff;
+        }
+        img {
+            position: absolute;
+            top: 30px;
+            right: 8px;
+            cursor: pointer;
+            z-index: 1;
+            scale: 0.9;
+        }
+    }
+
+    .left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: hidden;
+        article {
+            h4 {
+                color: #B5221C;
+                font-family: "Reggae One", system-ui;
+                font-size: 60px;
+                width: 450px;
+                margin-bottom: 30px;
+                position: relative;
+                animation: fromLeft 1s;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    height: 2px;
+                    background-color: #A60E0D;
+                    animation: bordersize 3s infinite;
+                }
+            }
+            p {
+                font-size: 30px;
+                color: #fff;
+                font-family: "Underdog", system-ui;
+                animation: fromBack 1s;
+            }
+            button {
+                border: 2px solid #B5221C;
+                background-color: #010101;
+                color: #B5221C;
+                font-family: "Reggae One", system-ui;
+                padding: 5px 20px;
+                font-size: 23px;
+                border-radius: 20px;
+                margin-top: 15px;
+                cursor: pointer;
+                animation: fromBottom 1s;
+                &:hover {
+                    transition: 0.3s;
+                    background-color: #B5221C;
+                    color: #fff;
+                    border: 2px solid #fff;
+                    box-shadow: 0px 0px 30px #B5221C;
+                }
+                &:active {
+                    background-color: #820000;
+                }
+            }
+        }
+    }
+}
