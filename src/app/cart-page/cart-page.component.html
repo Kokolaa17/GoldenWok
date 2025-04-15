@@ -24,10 +24,14 @@
                 <td>{{dish.price}}$</td>
                 <td>{{dish.quantity * dish.price}}$</td>
                 <td>
-                    <button>Remove</button>
+                    <button class="remove-button">Remove <i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
                 </td>
             </tr>
         }
+        @empty {
+            <img class="empty-cart" src="/images/emptyCart.png" alt="emptyCart">
+        }
     </table>
+    
 </section>
 

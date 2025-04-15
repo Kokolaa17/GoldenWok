@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { APIconnectionService } from '../apiconnection.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ordering-page',
@@ -8,7 +9,7 @@ import { APIconnectionService } from '../apiconnection.service';
   styleUrl: './ordering-page.component.scss'
 })
 export class OrderingPageComponent {
-  constructor(public API: APIconnectionService){
+  constructor(public API: APIconnectionService, public routing: Router){
     this.Categorys()
     this.allProducts()
   }
@@ -33,5 +34,9 @@ export class OrderingPageComponent {
   filterByCategory(categoryId: number){
     this.displayProducts = [];
     this.API.categoryFiltration(categoryId).subscribe((data: any) => this.displayProducts = data.products);
+  }
+  
+  showDetails(details: any){
+    this.routing.navigate(["/details"], {queryParams: details})
   }
 }

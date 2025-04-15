@@ -27,7 +27,7 @@
                         <p class="veg"><i [style.color]="food.vegeterian ? '#59ff00' : 'red'" class="fa-solid fa-{{food.vegeterian ? 'check' : 'x'}}"></i> Vegetarian</p>
                     </div>
                     <div class="action-buttons">
-                        <button><span>View Details</span> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
+                        <button (click)="showDetails(food)"><span>View Details</span> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
                         <button><span>Add to cart</span> <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></button>
                     </div>
                 </div>
