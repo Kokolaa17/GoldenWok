@@ -1,0 +1,19 @@
+<section>
+  <div class="log-in">
+    <h3>Log in</h3>
+    <form [formGroup]="logInForm" (ngSubmit)="logInAccount()">
+        <input type="email" placeholder="Email" formControlName="email">
+        <input type="password" placeholder="Password" formControlName="password">
+        <button [style.backgroundColor]="logInForm.invalid ? '#ac1f286e' : '#AC1F28'" [disabled]="logInForm.invalid" class="logInButton" type="submit" type="submit">Log in</button>
+    </form>
+    <p>Don`t have an account? <span routerLink="/register">Register!</span></p>
+    <div class="displayErorrText">
+        @if (badRequest) {
+            <h6 style="color: rgb(255 0 16);" [style.display]="badRequest ? 'block' : 'none'">{{badRequest}} <i class="fa-solid fa-circle-exclamation fa-fade"></i></h6>
+        }
+        @if (isLogedIn) {
+            <h6 style="color: green;" [style.display]="isLogedIn ? 'block' : 'none'">Logged in successfully <i class="fa-solid fa-check fa-fade"></i></h6>
+        }
+    </div>
+  </div>
+</section>

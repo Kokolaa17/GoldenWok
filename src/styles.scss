@@ -55,6 +55,19 @@ body {
     }
 }
 
+@keyframes fromBackRotate {
+    from {
+        scale: 0;
+        opacity: 0;
+        rotate: (160deg);
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+        rotate: (0deg);
+    }
+}
+
 @keyframes appear {
     from {
         opacity: 0;

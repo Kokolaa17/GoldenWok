@@ -1,0 +1,85 @@
+section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://png.pngtree.com/background/20230516/original/pngtree-small-dark-room-filled-with-old-furniture-and-oriental-lanterns-picture-image_2601802.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: appear 1s;
+    .log-in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 16px;
+        backdrop-filter: blur(10px) brightness(60%);
+        gap: 25px;
+        border: 2px solid #ffffff84;
+        animation: fromBack 1s;
+        h3 {
+            font-family: "Reggae One", system-ui;
+            color: #b30a16;
+            font-size: 30px;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0px 0px 15px #010101;
+            letter-spacing: 2px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            input {
+                height: 40px;
+                width: 100%;
+                border: 2px solid #ffffff84;
+                border-radius: 8px;
+                padding-left: 10px;
+                font-size: 17px;
+                background-color: rgba(0, 0, 0, 0.099);
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+                &:focus {
+                    border: none;
+                    outline: none;
+                    box-shadow: 0px 0px 10px #fff;
+                }
+            }
+            button {
+                background-color: #AC1F28;
+                color: #fff;
+                height: 40px;
+                font-size: 16px;
+                font-family: "Reggae One", system-ui;
+                border: none;
+                outline: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+        p {
+            color: #fff;
+            span {
+                color: #AC1F28;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        h6 {
+            font-family: "Reggae One", system-ui;
+            font-size: 14px;
+        }
+    }
+}
+
+input.ng-invalid.ng-dirty {
+    border: 2px solid red !important;
+    box-shadow: 0px 0px 10px red !important;
+}

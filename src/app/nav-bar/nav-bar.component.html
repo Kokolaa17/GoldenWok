@@ -5,9 +5,17 @@
     </div>
 
     <ul>
-        <li routerLink="/">Home</li>
-        <li routerLink="/order">Order</li>
-        <li routerLink="/cart">Cart <span>{{itemsInCart}}</span></li>
+        @if (this.cookies.check("userLogedIn")) {
+            <li routerLinkActive="active-page" routerLink="userpage" class="user-page">{{userFirstName}} <img [src]="avatar" alt="{{userFirstName}}`s avatar"></li>
+        }
+        @else {
+            <li routerLink="login" routerLinkActive="active-page">Log in <i class="fa-solid fa-circle-user"></i></li>
+        }
+
+        <li routerLinkActive="active-page" routerLink="/order">Order <i class="fa-solid fa-bowl-food"></i></li>
+        @if (this.cookies.check("userLogedIn")) {
+            <li routerLinkActive="active-page" routerLink="/cart">Cart <span>{{itemsInCart}}</span></li>
+        }
         <button><i class="fa-solid fa-phone" style="color: #ffffff;"></i></button>
     </ul>
 </nav>
