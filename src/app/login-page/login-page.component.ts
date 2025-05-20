@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './login-page.component.scss'
 })
 export class LoginPageComponent {
-  constructor(public http : APIconnectionService, public cookies : CookieService, public RouteR : Router){
+  constructor(private http : APIconnectionService, public cookies : CookieService, public RouteR : Router){
 
   }
 

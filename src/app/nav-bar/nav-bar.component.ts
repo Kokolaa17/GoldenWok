@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent implements OnInit {
-  constructor(public API: APIconnectionService, public cookies : CookieService){
+  constructor(private API: APIconnectionService, public cookies : CookieService){
     this.getCartItemsNumber()
   }
 
@@ -29,6 +29,7 @@ export class NavBarComponent implements OnInit {
       wasLoggedIn = isNowLoggedIn;
     }, 1000);
 
+    this.getCartItemsUpdate()
   }
 
   public itemsInCart:any;
@@ -37,6 +38,12 @@ export class NavBarComponent implements OnInit {
 
   getCartItemsNumber(){
     this.API.getCart().subscribe((data:any) => this.itemsInCart = data.length)  
+  }
+
+  getCartItemsUpdate(){
+    this.API.transferProductsInCart.subscribe({
+      next: (data: number) => this.itemsInCart = data
+    })
   }
 
   getNavBarLogin(){

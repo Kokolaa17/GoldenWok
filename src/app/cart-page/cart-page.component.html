@@ -17,14 +17,14 @@
                 <td><img [src]="dish.product.image" alt=""></td>
                 <td>{{dish.product.name}}</td>
                 <td>
-                    <button class="quantity-button"><i class="fa-solid fa-plus"></i></button>
+                    <button (click)="chooseQuantityIncrease(dish)" class="quantity-button"><i class="fa-solid fa-plus"></i></button>
                     <span>{{dish.quantity}}</span>
-                    <button class="quantity-button"><i class="fa-solid fa-minus"></i></button>
+                    <button (click)="chooseQuantityDecrease(dish)" class="quantity-button"><i class="fa-solid fa-minus"></i></button>
                 </td>
                 <td>{{dish.price}}$</td>
                 <td>{{dish.quantity * dish.price}}$</td>
                 <td>
-                    <button class="remove-button">Remove <i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+                    <button (click)="deleteItemFromCart(dish.product.id)" class="remove-button">Remove <i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
                 </td>
             </tr>
         }

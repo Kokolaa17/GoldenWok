@@ -12,7 +12,7 @@
                 <p class="veg"><i [style.color]="details.vegeterian ? '#59ff00' : 'red'" class="fa-solid fa-{{details.vegeterian ? 'check' : 'x'}}"></i> Vegetarian</p>
             </div>
             <p>{{details.name}} ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, quo quisquam ducimus dolore beatae eos similique vero magni exercitationem ipsa cumque soluta corporis sunt suscipit sed fuga, repellendus amet necessitatibus dolores cupiditate et nesciunt dolorem, aliquid tempore? Culpa aliquam placeat, illo est rem, facilis, quis magnam sed nesciunt deleniti provident beatae debitis nulla iure delectus eos! Quia, laudantium recusandae. Odio facere dignissimos officia natus vitae adipisci impedit, quia placeat.</p>
-            <button>Add to cart <i class="fa-solid fa-cart-shopping fa-beat"></i></button>
+            <button (click)="addToCart(details)">Add to cart <i class="fa-solid fa-cart-shopping fa-beat"></i></button>
         </article>
     </div>
 </section>
